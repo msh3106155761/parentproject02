@@ -1,0 +1,20 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: userProvider01
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring-cloud
+    username: root
+    password: msh
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka,http://localhost:9000/eureka
